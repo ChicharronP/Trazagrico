@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap'); /*Literata*/
+
+body {
+    background-color: #333; /* Fondo oscuro para contraste */
+  }
+  
+  .custom-header {
+    background-color: #6B8E23; /* Color del encabezado */
+  }
+  
+  .text-light {
+    color: #FEFAC0; /* Color del texto */
+  }
+  
+  .btn-outline-light {
+    color: #FEFAC0; /* Color del texto del botón */
+    border-color: #FEFAC0; /* Color del borde del botón */
+  }
+  
+  .btn-outline-light:hover {
+    background-color: rgba(255, 250, 192, 0.5); /* Color de fondo al pasar el mouse */
+  }
+  
+  .imagen-con-texto {
+    position: relative; /* Necesario para posicionar el texto sobre la imagen */
+  }
+  
+  .imagen-con-texto img {
+    display: block; /* Elimina el espacio debajo de la imagen */
+    width: 100%; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la proporción */
+  }
+  
+/* Contenedor de la imagen con texto superpuesto */
+.text-overlay-container {
+  background-image: url('src/images/index/zanahorias.jpg'); /* URL de la imagen */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: start; /* Alineación del contenido hacia la izquierda */
+  border-radius: 8px;
+  padding-left: 5%; /* Separación de los bordes de la imagen */
+}
+
+.text-overlay-content {
+  padding: 20px;
+  border-radius: 8px;
+  color: #FEFAC0; /* Color del texto */
+  text-align: left;
+  max-width: 60%;
+}
+
+.text-overlay-content h3 {
+  font-family: 'Literata', serif;
+  font-size: 25px;
+}
+
+.text-overlay-content p {
+  font-family: 'Literata', serif;
+  font-size: 18px;
+}
+
+.ver-productos {
+  font-size: calc(1rem + 0.5vw);
+  padding: 0.5rem 1rem;
+  color: #FEFAC0;
+  background-color: #6B8E23;
+  border: none;
+  margin-top: 1rem;
+}
+
+  .carousel {
+    max-width: 600px; /* Cambia este valor al tamaño deseado */
+    margin: auto; /* Centra el carrusel en la página */
+}
+
+.carousel-item img {
+    width: 100%; /* Asegúrate de que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 900px; /* Cambia este valor al tamaño deseado */
+}
+
+.carousel-item{
+    font-family: "Literata", serif;
+}
+
+.carousel-item h5{
+ font-weight: bold;
+}
+
+
+/* Responsividad */
+@media (max-width: 991px) {
+  .text-overlay-container {
+      height: auto; /* Ajusta la altura para adaptarse al contenido */
+      padding: 0; /* Elimina el padding */
+  }
+
+  .imagen-con-texto img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem; /* Espacio debajo de la imagen */
+  }
+
+  .text-overlay-content {
+      max-width: 100%; /* Aumenta el ancho del texto en dispositivos móviles */
+      margin-top: 0; /* Sin margen superior */
+      color: #FEFAC0;/* Ajusta el color para que se vea bien sobre fondo blanco */
+      text-align: center;
+      padding: 10px; /* Añade padding para espaciado */
+  }
+
+  .text-overlay-content h3 {
+      font-size: 1.5rem;
+  }
+
+  .text-overlay-content p {
+      font-size: 1rem;
+  }
+
+  .ver-productos {
+      display: block;
+      margin: 1rem auto 0;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+  }
+}

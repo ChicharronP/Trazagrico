@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Menú del Agricultor - Trazagrico</title>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navegacion">
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary custom-header">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Trazagrico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="acerca_de.html">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="ver_productos.html">Ver productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Contáctanos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+  <!-- Menú del Agricultor -->
+  <main class="container my-5">
+    <h2 class="mb-4 text-center">Menú del Agricultor</h2>
+    <div class="row justify-content-center">
+      <!-- Botón para el registro de productos -->
+      <div class="col-md-4 mb-3">
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#registrarProductoModal">
+          Registrar Producto
+        </button>
+      </div>
+      <!-- Botón para ver productos registrados -->
+      <div class="col-md-4 mb-3">
+        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#verProductosModal">
+          Ver Productos Registrados
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Registrar Producto -->
+  <div class="modal fade" id="registrarProductoModal" tabindex="-1" aria-labelledby="registrarProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registrarProductoModalLabel">Registrar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Formulario para registrar un producto -->
+          <form>
+            <div class="mb-3">
+              <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+              <input type="text" class="form-control" id="nombreProducto" required>
+            </div>
+            <div class="mb-3">
+              <label for="descripcionProducto" class="form-label">Descripción</label>
+              <select class="form-control" name="tipo" id="descripcionProducto" rows="3" required >
+                <option value="frutas">Frutas</option>
+                <option value="frutos_secos">Frutos Secos</option>
+                <option value="hortalizas">Hortalizas</option>
+                <option value="hierbas">Hierbas</option>
+                <option value="legumbres">Legumbres</option>
+                <option value="tuberculos">Tuberculos</option>
+                <option value="cereales">Cereales</option>
+            </select>
+
+            </div>
+            <div class="mb-3">
+                <label for="fecha_cosecha" class="form-label">Fecha de Cosecha</label>
+                <input class="form-control" id="fecha_cosecha" type="date" rows="3" required></input>
+              </div>
+            <button type="submit" class="btn btn-primary">Guardar Producto</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Ver Productos Registrados -->
+  <div class="modal fade" id="verProductosModal" tabindex="-1" aria-labelledby="verProductosModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="verProductosModalLabel">Productos Registrados</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Aquí podrías listar los productos registrados -->
+          <p>Aquí se mostrarán los productos registrados por el agricultor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
